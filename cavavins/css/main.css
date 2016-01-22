@@ -1,0 +1,139 @@
+.mainTitre{
+	font-family: "Montserrat", Helvetica, sans-serif;
+}
+.jumbotron{
+	background-color: transparent;
+}
+.sr-only{
+	color: black;
+}
+a{
+	color: black;
+	text-transform: uppercase;
+}
+.moreSpace{
+	padding-bottom: 80px;
+}
+.ok{
+	background-color: red;
+	width: 100px;
+	height: 100px;
+}
+.glyphicon{
+	margin-left: 20px;
+	opacity: 0.3;
+}
+.mybtn-success{
+	color: white;
+	background-color: #00B437;
+
+}
+.mybtn-success:hover{
+	-webkit-animation-name: animateSuccess; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animateSuccess;
+    animation-duration: 1s;
+    background-color: white;
+    color:#00B437;
+    border: 1px solid #00B437;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animateSuccess {
+    0%   {background-color: #00B437; }
+    100% {background-color: white; color:#00B437; border: 1px solid #00B437;}
+}
+
+/* Standard syntax */
+@keyframes animateSuccess {
+    0%   {background-color: #00B437;}
+    100% {background-color: white; color:#00B437; border: 1px solid #00B437;}
+}
+.mybtn-primary{
+	color: white;
+	background-color: #486784;
+
+}
+.mybtn-primary:hover{
+	-webkit-animation-name: animatePrimary; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animatePrimary;
+    animation-duration: 1s;
+    background-color: white;
+    color:#486784;
+    border: 1px solid #486784;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animatePrimary {
+    0%   {background-color: #486784; }
+    100% {background-color: white; color:#486784; border: 1px solid #486784;}
+}
+
+/* Standard syntax */
+@keyframes animatePrimary {
+    0%   {background-color: #486784;}
+    100% {background-color: white; color:#486784; border: 1px solid #486784;}
+}
+.mybtn-danger{
+	color: white;
+	background-color: #DC4028;
+
+}
+.mybtn-danger:hover{
+	-webkit-animation-name: animateDanger; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animateDanger;
+    animation-duration: 1s;
+    background-color: white;
+    color:#DC4028;
+    border: 1px solid #DC4028;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animateDanger {
+    0%   {background-color: #DC4028; }
+    100% {background-color: white; color:#DC4028; border: 1px solid #DC4028;}
+}
+
+/* Standard syntax */
+@keyframes animateDanger {
+    0%   {background-color: #DC4028;}
+    100% {background-color: white; color:#DC4028; border: 1px solid #DC4028;}
+}
+.mybtn-careful{
+    color: white;
+    background-color: #FF8700;
+
+}
+.mybtn-careful:hover{
+    -webkit-animation-name: animateCareful; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animateCareful;
+    animation-duration: 1s;
+    background-color: white;
+    color:#FF8700;
+    border: 1px solid #FF8700;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animateCareful {
+    0%   {background-color: #FF8700; }
+    100% {background-color: white; color:#FF8700; border: 1px solid #FF8700;}
+}
+
+/* Standard syntax */
+@keyframes animateCareful {
+    0%   {background-color: #FF8700;}
+    100% {background-color: white; color:#FF8700; border: 1px solid #FF8700;}
+}
+.liFind{
+    background-color: #486784;
+    opacity: 0.4;
+
+}
+.rightFloat {
+    float: right;
+}
+.rightFloat:hover {
+    opacity: 1;
+}
+.smallFont{
+    font-size: 11px !important;
+}

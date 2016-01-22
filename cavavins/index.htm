@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="css/js/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<title>La cave à vins</title>
+	<style>
+	.jumbotron{
+		text-align: center
+	}
+	</style>
+</head>
+<body>
+<div id="blockData"></div>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="mainTitre">La cave à vins </h1>
+			<p>Trouver les meilleurs vins de votre région</p>
+		</div>
+	</div>
+	<div class="moreSpace">
+		<form action="#" method="GET" class="form-inline col-xs-12 col-sm-12 col-md-12 col-lg-12" role="form">
+			<div class="form-group" >
+				<label for="inputSearch">Your wine :</label>
+				<input type="text" name="name" class="form-control" id="inputSearch" placeholder="Name of wine...">
+			</div>
+			<span id="btnSearch" class="btn mybtn-primary">Search</span>
+			<div id="btnAddWine" class="btn mybtn-success">New Wine</div>
+		</form>
+	</div>
+	 <div class="container-fluid">
+      <div class="row">
+        <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <ul class="nav nav-sidebar">
+            
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="blockNewWine">
+        	<a  id="btnCloseNewWine" class="col-md-11 col-md-offset-11 col-sm-offset-11 col-xs-offset-11">
+        		<span class="glyphicon glyphicon-remove text-right"></span>
+        	</a>
+        	<form  id="frmWine" action="http://localhost:81/wines/" method="POST" role="form">
+                <div class="row">
+                <fieldset class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <legend id="legendFrmWine">Add a wine : </legend>
+                </fieldset>
+                </div>
+            		<div class="form-group">
+                        <label for="idWine">Id :</label>
+                        <input type="text" name="id" id="idWine" class="form-control" disabled="disabled">
+                    </div>
+            		<div class="form-group">
+            			<label for="nameWine">Name :</label>
+            			<input type="text" name="name" id="nameWine" class="form-control" placeholder="Ex : CHATEAU DE SAINT COSME">
+                        <span class="help-block with-errors smallFont" >Only letters..(" and / accepted)</span>
+            		</div>
+            		<div class="form-group">
+            			<label for="grapesWine">Grapes :</label>
+            			<input type="text" name="grapes" id="grapesWine" class="form-control" placeholder="Ex : Grenache">
+                        <span class="help-block with-errors smallFont" >Only letters..(" and / accepted)</span>
+            		</div>
+            		<div class="form-group">
+            			<label for="countryWine">Country :</label>
+            			<input type="text" name="country" id="countryWine" class="form-control" placeholder="Ex : France">
+                        <span class="help-block with-errors smallFont" >Only letters..(" and / accepted)</span>
+            		</div>
+            		<div class="form-group">
+            			<label for="regionWine">Region :</label>
+            			<input type="text" name="region" id="regionWine" class="form-control" placeholder="Ex : Southern Rhone">
+                        <span class="help-block with-errors smallFont" >Only letters..(" and / accepted)</span>
+            		</div>
+            		<div class="form-group">
+                        <label for="yearWine">Year :</label>
+                        <input type="text" name="year" id="yearWine" class="form-control" placeholder="Ex : 2009">
+                        <span class="help-block with-errors smallFont" >Only four numbers</span>
+                    </div>
+                    <div class="form-group">
+                      <label for="textWine">Description :</label>
+                      <textarea class="form-control" rows="5" id="textWine" placeholder="Ex : A verry popular wine from ..." ></textarea>
+                      <span class="help-block with-errors smallFont" >Only letters..( , . ! - ? " ' accepted)</span>
+                    </div>
+        		
+        	
+        		<span id="btSend" title="btSend" class="btn mybtn-primary">Save</span>
+        		<button type="reset" id="btReset" class="btn mybtn-danger">Reset</button>
+        	</form>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="blockWine">
+            <a id="btnCloseWine" class="col-md-11 col-md-offset-11 col-sm-offset-11 col-xs-offset-11">
+        		<span class="glyphicon glyphicon-remove text-right"></span>
+        	</a>
+        	<div class="row">
+        		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        			<br>
+					<img id="imgWine" src="#" class="img-responsive col-md-6 col-md-offset-3 col-sm-offset-4 col-xs-offset-3" alt="Image Wine">
+        		</div>
+        		<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <fieldset>
+            			<legend> Notes: </legend>
+            			<p id="note">
+            			</p>
+                    </fieldset>
+        		</div>
+        	</div>
+        </div>
+      </div>
+	</div>	
+</body>
+</html>
