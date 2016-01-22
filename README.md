@@ -1,11 +1,9 @@
 #### PROJET DE GROUPE SLIM #####
 ### Cave à vins - Wine Bar ###
 
-/**
-*
+
 * MEMBRES de l'équipe : Gabriel, Pablo, Léo, Lou, Sami
-*
-**/
+
 
 ### Cave à vins -> Front-end : Interroge la BDD en passant par slim pour obtenir les data.
 
