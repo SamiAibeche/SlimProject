@@ -5,6 +5,14 @@
 * MEMBRES de l'équipe : Gabriel, Pablo, Léo, Lou, Sami
 
 
+Avant toutes choses : Créer un fichier .htaccess dans le même dossier que celui ou se trouve le fichier index.php et y copier ces informations :
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+
 ### Cave à vins -> Front-end : Interroge la BDD en passant par slim pour obtenir les data.
 
 ### Wine bar -> Back-end : Interronge la BDD pour générer les data et les renvoyer à cavavins.
