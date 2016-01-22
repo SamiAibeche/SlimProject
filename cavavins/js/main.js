@@ -108,7 +108,7 @@ $(document).ready(function(){
 	        			var liSelect = $(this);
 						for(var j=0; j<dataObject.length; j++){
 	        				if(liSelect[0].id === dataObject[j].id){
-	        					$("#imgWine").attr("src","http://localhost:81/slimProject/wines/front/img/"+dataObject[j].picture);
+	        					$("#imgWine").attr("src","http://localhost:81/SlimProject/wines/front/img/"+dataObject[j].picture);
 	        					$("#imgWine").attr("alt",dataObject[j].name);
 	        					$("#note").text(dataObject[j].description);
 	        				}	
@@ -151,7 +151,7 @@ $(document).ready(function(){
 
 								//AJAX - DELETE Method
 								$.ajax({
-								  	url: "http://localhost:81/slimProject/wines/"+idVal,
+								  	url: "http://localhost:81/SlimProject/wines/"+idVal,
 								  	method: "DELETE"
 								}).done(function( data ) {
 								    if(data=="valid"){
@@ -197,7 +197,7 @@ $(document).ready(function(){
 		if(mot !== ""){
 
 			//AJAX - GET Method
-			$.get("http://localhost:81/slimProject/wines/search/"+mot, function( data ) {
+			$.get("http://localhost:81/SlimProject/wines/search/"+mot, function( data ) {
 
 				if(data !== "unvalid"){
 					var dataObject = JSON.parse(data);
@@ -205,7 +205,7 @@ $(document).ready(function(){
 						var idSeek = dataObject[i].id;
 						$li = $("#"+idSeek);
 						$($li).addClass("liFind");
-						$("#imgWine").attr("src","http://localhost:81/slimProject/wines/front/img/"+dataObject[i].picture);
+						$("#imgWine").attr("src","http://localhost:81/SlimProject/wines/front/img/"+dataObject[i].picture);
 						$("#imgWine").attr("alt",dataObject[i].name);
 						$("#note").text(dataObject[i].description);
 						$("#blockWine").show("slow");
@@ -226,7 +226,7 @@ $(document).ready(function(){
 		if(value !== ""){
 
 			//AJAX - GET Method
-			$.get("http://localhost:81/slimProject/wines/searchBy/"+value, function( data ) {
+			$.get("http://localhost:81/SlimProject/wines/searchBy/"+value, function( data ) {
 				if(data !== "unvalid"){
 				var dataObject = JSON.parse(data);
 				//Recreate - SideBar
@@ -243,7 +243,7 @@ $(document).ready(function(){
 	        			var liSelect = $(this);
 						for(var j=0; j<dataObject.length; j++){
 	        				if(liSelect[0].id === dataObject[j].id){
-	        					$("#imgWine").attr("src","http://localhost:81/slimProject/wines/front/img/"+dataObject[j].picture);
+	        					$("#imgWine").attr("src","http://localhost:81/SlimProject/wines/front/img/"+dataObject[j].picture);
 	        					$("#imgWine").attr("alt",dataObject[j].name);
 	        					$("#note").text(dataObject[j].description);
 	        				}	
@@ -286,7 +286,7 @@ $(document).ready(function(){
 
 								//AJAX - DELETE Method
 								$.ajax({
-								  	url: "http://localhost:81/slimProject/wines/"+idVal,
+								  	url: "http://localhost:81/SlimProject/wines/"+idVal,
 								  	method: "DELETE"
 								}).done(function( data ) {
 								    if(data=="valid"){
@@ -318,7 +318,7 @@ $(document).ready(function(){
 			});
 		} else if(value==""){
 			//AJAX - GET Method
-			$.get("http://localhost:81/slimProject/wines/", function( data ) {
+			$.get("http://localhost:81/SlimProject/wines/", function( data ) {
 				if(data !== "unvalid"){
 					var dataObject = JSON.parse(data);
 					//Recreate - SideBar
@@ -335,7 +335,7 @@ $(document).ready(function(){
 	        				var liSelect = $(this);
 							for(var j=0; j<dataObject.length; j++){
 	        					if(liSelect[0].id === dataObject[j].id){
-	        						$("#imgWine").attr("src","http://localhost:81/slimProject/wines/front/img/"+dataObject[j].picture);
+	        						$("#imgWine").attr("src","http://localhost:81/SlimProject/wines/front/img/"+dataObject[j].picture);
 	        						$("#imgWine").attr("alt",dataObject[j].name);
 	        						$("#note").text(dataObject[j].description);
 	        					}	
@@ -378,7 +378,7 @@ $(document).ready(function(){
 
 								//AJAX - DELETE Method
 									$.ajax({
-									  	url: "http://localhost:81/slimProject/wines/"+idVal,
+									  	url: "http://localhost:81/SlimProject/wines/"+idVal,
 									  	method: "DELETE"
 									}).done(function( data ) {
 									    if(data=="valid"){
@@ -455,7 +455,7 @@ $(document).ready(function(){
 			if(name==="btSend"){
 				
 				//AJAX - Post Method
-				$.post( "http://localhost:81/slimProject/wines/",{ 
+				$.post( "http://localhost:81/SlimProject/wines/",{ 
 					name: nameVal,
 					grapes: grapesVal,
 					country: countryVal,
@@ -484,7 +484,7 @@ $(document).ready(function(){
 				
 				//AJAX - Put method
 				$.ajax({
-			        url: 'http://localhost:81/slimProject/wines/'+idVal,
+			        url: 'http://localhost:81/SlimProject/wines/'+idVal,
 			        type: "PUT",
 			        contentType: "application/json",
 			        processData: "false",
