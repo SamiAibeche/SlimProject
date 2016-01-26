@@ -164,11 +164,11 @@ $(document).ready(function(){
 								  	
 								  	} else if(data=="404") {
 		
-					  					console.log("Error 404");
+					  					window.location.href = 'http://localhost:81/SlimProject/cavavins/404.htm';
 			
-					  				} else if(data=="404") {
+					  				} else if(data=="400") {
 					
-					  					console.log("Error 400");
+					  					window.location.href = 'http://localhost:81/SlimProject/cavavins/400.htm';
 					  				}
 								});
 							});
@@ -299,11 +299,11 @@ $(document).ready(function(){
 								  	
 								  	} else if(data=="404") {
 		
-					  					console.log("Error 404");
+					  					window.location.href = 'http://localhost:81/SlimProject/cavavins/404.htm';
 			
-					  				} else if(data=="404") {
+					  				} else if(data=="400") {
 					
-					  					console.log("Error 400");
+					  					window.location.href = 'http://localhost:81/SlimProject/cavavins/400.htm';
 					  				}
 								});
 							});
@@ -391,11 +391,11 @@ $(document).ready(function(){
 									  	
 									  	} else if(data=="404") {
 			
-					  						console.log("Error 404");
+					  						window.location.href = 'http://localhost:81/SlimProject/cavavins/404.htm';
 				
-					  					} else if(data=="404") {
+					  					} else if(data=="400") {
 						
-					  						console.log("Error 400");
+					  						window.location.href = 'http://localhost:81/SlimProject/cavavins/400.htm';
 					  					}
 									});
 								});
@@ -473,10 +473,11 @@ $(document).ready(function(){
 				  		showRefuteMessage("submitting");
 				  	} else if(data=="404") {
 	
-				  		console.log("Error 404");
-				  	} else if(data=="404") {
+				  		window.location.href = 'http://localhost:81/SlimProject/cavavins/404.htm';
+
+				  	} else if(data=="400") {
 	
-				  		console.log("Error 400");
+				  		window.location.href = 'http://localhost:81/SlimProject/cavavins/400.htm';
 				  	}
 				});
 	
@@ -500,11 +501,11 @@ $(document).ready(function(){
 
 					  	} else if(data=="404") {
 		
-					  		console.log("Error 404");
+					  		window.location.href = 'http://localhost:81/SlimProject/cavavins/404.htm';
 
-					  	} else if(data=="404") {
+					  	} else if(data=="400") {
 		
-					  		console.log("Error 400");
+					  		window.location.href = 'http://localhost:81/SlimProject/cavavins/400.htm';
 					  	}
 			        }
 					
