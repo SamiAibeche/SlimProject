@@ -13,10 +13,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
 
 
-### Cave à vins -> Front-end : Interroge la BDD en passant par slim pour obtenir les data.
+### Cave à vins -> Front-end : Interroge la BDD en passant par slim pour obtenir les données.
 
-### Wine bar -> Back-end : Interronge la BDD pour générer les data et les renvoyer à cavavins.
-### Wine bar -> Front-end : Génere un catalogue de toutes les data
+### Wine bar -> Back-end : Interronge la BDD pour générer les données et les renvoyer à cavavins.
+### Wine bar -> Front-end : Génere un catalogue de toutes les données
 
 
 ### NOTE ! Le port utilisé dans ce projet est le "81" (http://localhost:81/SlimProject/cavavins/index.htm) 
