@@ -16,7 +16,7 @@ require "rb.php";
 
 $app = new \Slim\App;
 
-//Initialisation des données de connexions
+//Initializing SQL connection
 R::setup( 'mysql:host=localhost;dbname=wine','root', 'root' );
 
 
@@ -24,11 +24,11 @@ R::setup( 'mysql:host=localhost;dbname=wine','root', 'root' );
 
 $app->get('/', function (Request $request, Response $response) {
 
-    //Méthode finAll de redBean (retourne un objet de tous les vins)
+    //FindAll method from redBean (return an object with all wines )
     $wines = R::findAll( 'wine' );
     try{
 
-      //Méthode exportAll (transforme l'objet en tableau)
+      //ExportAll method (transform the object on an array)
       $arrays = R::exportAll( $wines );
 
         //Return data
@@ -57,11 +57,12 @@ $app->get('/orderby/{order}', function (Request $request, Response $response) {
         //Recup - Initializing data 
         $order = $request->getAttribute('order');
 
-        //Méthode finAll de redBean (retourne un objet de tous les vins ordonés par $order)
+        //FindAll method from redBean (return an object with all wines order by $order)
         $wines = R::findAll( 'wine' , ' ORDER BY '.$order.'' );
 
-        //Méthode exportAll (transforme l'objet en tableau)
+        //ExportAll method (transform the object on an array)
         $arrays = R::exportAll( $wines );
+
         //Return data
         if(!empty($arrays)){
             $dataStr = json_encode($arrays, JSON_PRETTY_PRINT);
@@ -87,10 +88,10 @@ $app->get('/search/{word}', function (Request $request, Response $response) {
         //Recup - Initializing data 
         $word = $request->getAttribute('word');
 
-        //Méthode findOne de redBean (retourne un objet du vin recherché)
+        //FindOne method from redBean (return an object )
         $wines = R::findOne( 'wine' , ' name = ? ', [ $word ]);
 
-        //Méthode exportAll (transforme l'objet en tableau)
+        //ExportAll method (transform the object on an array)
         $arrays = R::exportAll( $wines );
 
         //Return data
@@ -119,10 +120,10 @@ $app->get('/searchBy/{letter}', function (Request $request, Response $response) 
         //Recup - Initializing data 
         $letter = $request->getAttribute('letter');
 
-        //Méthode find de redBean (retourne un objet des vin recherchés)
+        //FindOne method from redBean (return an object with all wines specify )
         $wines = R::find( 'wine' , ' name LIKE ? ', [ $letter.'%' ]);
 
-        //Méthode exportAll (transforme l'objet en tableau)
+        //ExportAll method (transform the object on an array)
         $arrays = R::exportAll( $wines );
         
         //Return data
@@ -149,10 +150,10 @@ $app->get('/{id}', function (Request $request, Response $response) {
         //Recup - Initializing data 
         $id = $request->getAttribute('id');
 
-        //Méthode load de redBean (retourne un objet du vin recherché selon l'ID)
+        //Load method (return an object)
         $wine = R::load('wine',$id);
 
-        //Méthode exportAll (transforme l'objet en tableau)
+        //ExportAll method (transform the object on an array)
         $arrays = R::exportAll( $wine );
 
         //Return data
