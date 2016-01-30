@@ -8,7 +8,6 @@ use \Psr\Http\Message\ResponseInterface as Response;
     	-> On slim/docs.com
     	-> Click on "web serveur" -> apache config
     */
-require 'getData.php';
 require 'vendor/autoload.php';
 
 //Red Beans
@@ -125,7 +124,7 @@ $app->get('/searchBy/{letter}', function (Request $request, Response $response) 
 
         //ExportAll method (transform the object on an array)
         $arrays = R::exportAll( $wines );
-        
+        //var_dump($arrays);
         //Return data
         if(!empty($arrays)){
             $dataStr = json_encode($arrays, JSON_PRETTY_PRINT);
